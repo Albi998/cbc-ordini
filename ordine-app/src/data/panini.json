@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "nome": "Carbo Beach Burger",
+    "descrizione": "Pane, Hamburger, Guanciale, Pomodori Secchi, Cipolla e Salsa al Pecorino.",
+    "img": "/images/cbb.webp",
+    "ingredienti": [
+      {
+        "nome": "Pane"
+      },
+      {
+        "nome": "Hamburger",
+        "tipo": "carne"
+      },
+      {
+        "nome": "Guanciale",
+        "tipo": "carne"
+      },
+      {
+        "nome": "Pomodori Secchi",
+        "tipo": "verdura"
+      },
+      {
+        "nome": "Pecorino",
+        "tipo": "formaggio"
+      },
+      {
+        "nome": "Cipolla",
+        "tipo": "verdura"
+      }
+    ],
+    "prezzo": 8.0,
+    "modificabile": false,
+    "salseExtra": true,
+    "costoSalsaExtra": 0.5
+  },
+  {
+    "id": 2,
+    "nome": "Hamburger",
+    "descrizione": "Comprende formaggio, 2 verdure e due salse a scelta (aggiunte extra +0.50€).",
+    "img": "/images/hamburger.webp",
+    "ingredienti": [
+      {
+        "nome": "Pane"
+      },
+      {
+        "nome": "Hamburger",
+        "tipo": "carne"
+      }
+    ],
+    "prezzo": 6.0,
+    "modificabile": true
+  },
+  {
+    "id": 3,
+    "nome": "Salsiccia",
+    "descrizione": "Comprende formaggio, 2 verdure e due salse a scelta (aggiunte extra +0.50€).",
+    "img": "/images/salsiccia.webp",
+    "ingredienti": [
+      {
+        "nome": "Pane"
+      },
+      {
+        "nome": "Salsiccia",
+        "tipo": "carne"
+      }
+    ],
+    "prezzo": 6.0,
+    "modificabile": true
+  }
+
+]

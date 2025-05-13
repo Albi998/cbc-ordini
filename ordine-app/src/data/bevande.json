@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "nome": "Acqua Naturale",
+    "descrizione": "Acqua Naturale",
+    "img": "/images/acquan.webp",
+    "prezzo": 0.5
+  },
+  {
+    "id": 2,
+    "nome": "Acqua Frizzante",
+    "descrizione": "Acqua Frizzante",
+    "img": "/images/acquaf.webp",
+    "prezzo": 0.5
+  },
+  {
+    "id": 3,
+    "nome": "Coca-Cola",
+    "descrizione": "Coca-Cola",
+    "img": "/images/coca.webp",
+    "prezzo": 1.5
+  },
+  {
+    "id": 4,
+    "nome": "Coca-Cola Zero",
+    "descrizione": "Coca-Cola Zero Zuccheri",
+    "img": "/images/cocazero.webp",
+    "prezzo": 1.5
+  },
+  {
+    "id": 5,
+    "nome": "Tè Limone",
+    "descrizione": "Tè al Limone",
+    "img": "/images/limone.webp",
+    "prezzo": 1.5
+  },
+  {
+    "id": 6,
+    "nome": "Tè Pesca",
+    "descrizione": "Tè alla Pesca",
+    "img": "/images/pesca.webp",
+    "prezzo": 1.5
+  },
+  {
+    "id": 8,
+    "nome": "Fanta",
+    "descrizione": "Fanta",
+    "img": "/images/fanta.webp",
+    "prezzo": 1.5
+  },
+  {
+    "id": 9,
+    "nome": "Gatorade",
+    "descrizione": "Rinfrescante, per gli sportivi!",
+    "img": "/images/rosso.webp",
+    "prezzo": 2.0
+  },
+  {
+    "id": 11,
+    "nome": "Birra",
+    "descrizione": "Birra media da 0.4l.",
+    "img": "/images/birra.webp",
+    "prezzo": 4.0
+  },
+  {
+    "id": 12,
+    "nome": "Spritz Aperol",
+    "descrizione": "Spritz Aperol",
+    "img": "/images/spritz.webp",
+    "prezzo": 4.0
+  }
+]

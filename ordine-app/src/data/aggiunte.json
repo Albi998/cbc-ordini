@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "nome": "Cheddar",
+    "tipo": "Formaggio"
+  },
+  {
+    "id": 2,
+    "nome": "Peperoni",
+    "tipo": "Verdure"
+  },
+  {
+    "id": 3,
+    "nome": "Cipolla caramellata",
+    "tipo": "Verdure"
+  },
+  {
+    "id": 4,
+    "nome": "Funghi",
+    "tipo": "Verdure"
+  },
+  {
+    "id": 5,
+    "nome": "Ketchup",
+    "tipo": "Salse"
+  },
+  {
+    "id": 6,
+    "nome": "Maionese",
+    "tipo": "Salse"
+  },
+  {
+    "id": 7,
+    "nome": "Salsa BBQ",
+    "tipo": "Salse"
+  }
+]

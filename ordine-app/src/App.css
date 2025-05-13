@@ -1,0 +1,156 @@
+/* Impostazioni di base */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.5px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg-light: #f1f1f1;
+  --color-bg-dark: #161616;
+  --color-bg-card-mobile: #242424;
+  --color-border-dark-mobile: #3d3d3d;
+  --color-text-dark: #121212;
+  --color-primary-light: #4caf50;
+  --color-primary-dark: #1b5e20;
+  --color-bottone-rosso: #db4f16;
+  --color-giallo-cbc: #fecf4d;
+}
+
+/* Contenitore principale per gestire la posizione della sidebar */
+.app-container {
+  display: flex;
+  transition: margin-left 0.3s ease;
+}
+
+/* Sidebar stile a sinistra */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Sidebar chiusa di default */
+  width: 250px;
+  height: 100vh;
+  background-color: var(--color-bg-card-mobile);
+  color: white;
+  transition: left 0.3s ease;
+  padding: 20px;
+  z-index: 1000; /* Assicurati che la sidebar sia sopra al contenuto */
+}
+
+.sidebar.open {
+  left: 0; /* Quando la sidebar è aperta, la posizione diventa 0 */
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  /* margin-top: 50px; */
+}
+
+.link-nav {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.link-nav:hover {
+  color: var(--color-giallo-cbc);
+}
+
+/* Hamburger button */
+.hamburger {
+  background: none;
+  border: none;
+  color: var(--color-bg-dark);
+  font-size: 38px;
+  position: absolute;
+  top: 48%;
+  right: -45px; /* Posiziona il pulsante fuori dalla sidebar */
+  cursor: pointer;
+  z-index: 1100; /* Assicurati che il pulsante sia sopra la sidebar */
+}
+
+/* Contenuto principale */
+.main-content {
+  flex-grow: 1;
+  margin-left: 0; /* Inizialmente senza margine */
+  transition: margin-left 0.3s ease;
+}
+
+.app-container.sidebar-open .main-content {
+  margin-left: 250px; /* Quando la sidebar è aperta, sposta il contenuto a destra */
+}
+
+/* Media Query per dispositivi mobili */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .hamburger {
+    top: 15px;
+    right: 15px;
+  }
+}
+
+.logo {
+  margin-bottom: 3rem;
+  width: 20px !important;
+  max-width: 20px;
+}
+
+.logo-img {
+  width: 150px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100vw;
+    height: auto;
+    top: -100%;
+    left: 0;
+    padding: 1rem 0;
+    transition: top 0.3s ease;
+  }
+
+  .sidebar.open {
+    top: 0;
+  }
+
+  .sidebar-content {
+    text-align: center;
+  }
+
+  .hamburger {
+    position: fixed;
+    top: 10px;
+    right: 15px;
+    z-index: 1100;
+    font-size: 32px;
+    color: #fff;
+  }
+
+  .main-content {
+    margin-left: 0 !important;
+  }
+
+  .app-container.sidebar-open .main-content {
+    margin-left: 0;
+  }
+
+  .logo-img {
+    width: 80px;
+  }
+}
+
+.link-nav.active {
+  color: var(--color-giallo-cbc);
+}
+
