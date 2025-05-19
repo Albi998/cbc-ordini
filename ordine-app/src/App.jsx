@@ -43,7 +43,7 @@ const AppLayout = ({ children }) => {
             <div className="logo">
               <img
                 className="logo-img"
-                src="./src/assets/logo.webp"
+                src="/images/logo.webp"
                 alt="logo"
               />
             </div>
