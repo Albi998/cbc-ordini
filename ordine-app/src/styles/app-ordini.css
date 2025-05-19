@@ -626,7 +626,7 @@ margin-bottom: 2rem;
   align-items: center;
   min-height: 100dvh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("./src/assets/cbc_sfondo_due.webp");
+    url("/images/cbc_sfondo_due.webp");
   background-repeat: no-repeat;
   background-size: 120% auto;
   animation: bgShift 9s ease infinite;
