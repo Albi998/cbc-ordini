@@ -59,6 +59,26 @@ const Cassa = () => {
     }
   }, []);
 
+  useEffect(() => {
+    const isMobile = window.matchMedia("(max-width: 600px)");
+
+    if (!isMobile.matches) {
+      navigate("/login");
+    }
+
+    const handleResize = (e) => {
+      if (!e.matches) {
+        navigate("/login");
+      }
+    };
+
+    isMobile.addEventListener("change", handleResize);
+
+    return () => {
+      isMobile.removeEventListener("change", handleResize);
+    };
+  }, [navigate]);
+
   const aggiungiPanino = (panino) => {
     setPaninoInCorso(panino); // Imposta il panino in corso
     setAggiunteSelezionate([]); // Resetta le aggiunte selezionate quando si seleziona un nuovo panino

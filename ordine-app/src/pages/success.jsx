@@ -6,6 +6,7 @@ const Success = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [ordine, setOrdine] = useState(null);
+  const [statoOrdine, setStatoOrdine] = useState(null);
   const [tempoRimanente, setTempoRimanente] = useState(0);
 
   const calcolaTotale = () => {
@@ -28,6 +29,7 @@ const Success = () => {
 
       if (!error && data) {
         setOrdine(data);
+        setStatoOrdine(data.stato);
 
         // Calcolo timer
         let creazione = new Date(data.created_at);
@@ -68,11 +70,7 @@ const Success = () => {
             },
             (payload) => {
               const nuovoStato = payload.new.stato;
-              if (nuovoStato === "in preparazione") {
-                localStorage.removeItem("ordine_inviato");
-                channel.unsubscribe();
-                navigate("/"); // 🔥 redirect
-              }
+              setStatoOrdine(nuovoStato);
             }
           )
           .subscribe();
@@ -101,6 +99,35 @@ const Success = () => {
 
   if (!ordine) {
     return <p className="text-center mt-5">Caricamento ordine...</p>;
+  }
+  if (statoOrdine === "in preparazione" || statoOrdine === "carne pronta") {
+    return (
+      <div className="container success waiting">
+        <h1>Ordine #{ordine.numero_ordine || ordine.id}</h1>
+        <p className="lead">Il tuo ordine è in preparazione. ⏳</p>
+        <p>Non chiudere questa schermata, ti avvisiamo appena è pronto!</p>
+      </div>
+    );
+  }
+
+  if (statoOrdine === "completo") {
+    return (
+      <div className="container success pronto">
+        <h1>Ordine #{ordine.numero_ordine || ordine.id} pronto! 🎉 </h1>
+        <p className="lead">Ritira al chiosco e buon appetito!</p>
+
+        <button
+          className="cancella-success"
+          onClick={() => {
+            localStorage.removeItem("ordine");
+            localStorage.removeItem("ordine_inviato");
+            navigate("/");
+          }}
+        >
+          Torna al Menù
+        </button>
+      </div>
+    );
   }
 
   return (
