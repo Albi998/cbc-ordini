@@ -358,7 +358,7 @@ const Cassa = () => {
   return (
     <div>
       <div className="banner-ordina">
-        <img src="/images/frittedue.webp" alt="" loading="lazy"/>
+        <img src="/images/frittedue.webp" alt="patatine fritte"/>
       </div>
       <div>
         <button onClick={handleLoginClick} className="btn-login btn-attivo">
