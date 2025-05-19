@@ -358,7 +358,7 @@ const Cassa = () => {
   return (
     <div>
       <div className="banner-ordina">
-        <img src="public/images/frittedue.webp" alt="" />
+        <img src="public/images/frittedue.webp" alt="" loading="lazy"/>
       </div>
       <div>
         <button onClick={handleLoginClick} className="btn-login btn-attivo">
@@ -408,7 +408,7 @@ const Cassa = () => {
                       >
                         <div className="row">
                           <div className="prodotto col-4">
-                            <img src={p.img} alt={p.nome} />
+                            <img src={p.img} alt={p.nome} loading="lazy"/>
                           </div>
                           <div className="prodotto-text col-6">
                             <h3>{p.nome}</h3>
@@ -452,7 +452,7 @@ const Cassa = () => {
                       <img
                         src={paninoInCorso.img}
                         alt={paninoInCorso.nome}
-                        className="aggiunte-img"
+                        className="aggiunte-img" loading="lazy"
                       />
                       <div className="aggiunte-body">
                         <h5 className="text-lg font-bold mb-3 text-center">
@@ -562,7 +562,7 @@ const Cassa = () => {
 
                         <div className="row">
                           <div className="prodotto col-4">
-                            <img src={b.img} alt={b.nome} />
+                            <img src={b.img} alt={b.nome} loading="lazy"/>
                           </div>
                           <div className="prodotto-text col-6">
                             <h3>{b.nome}</h3>
@@ -613,7 +613,7 @@ const Cassa = () => {
 
                         <div className="row">
                           <div className="prodotto col-4">
-                            <img src={s.img} alt={s.nome} width={"100px"} />
+                            <img src={s.img} alt={s.nome} width={"100px"} loading="lazy"/>
                           </div>
                           <div className="prodotto-text col-6">
                             <h3>{s.nome}</h3>
