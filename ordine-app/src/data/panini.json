@@ -38,7 +38,7 @@
     "id": 2,
     "nome": "Hamburger",
     "descrizione": "Comprende formaggio, 2 verdure e due salse a scelta (aggiunte extra +0.50€).",
-    "img": "/images/hamburger.webp",
+    "img": "/images/burger.webp",
     "ingredienti": [
       {
         "nome": "Pane"
@@ -55,7 +55,7 @@
     "id": 3,
     "nome": "Salsiccia",
     "descrizione": "Comprende formaggio, 2 verdure e due salse a scelta (aggiunte extra +0.50€).",
-    "img": "/images/salsiccia.webp",
+    "img": "/images/salsic.webp",
     "ingredienti": [
       {
         "nome": "Pane"

@@ -10,7 +10,7 @@
       "id": 2,
       "nome": "Patate in Sacchetto",
       "descrizione": "Patatine in Sacchetto.",
-      "img": "/images/patatine.webp",
+      "img": "/images/chips.webp",
       "prezzo": 1.0
     },
     {
@@ -24,7 +24,7 @@
       "id": 4,
       "nome": "Ghiacciolo",
       "descrizione": "Ghiacciolo confezionato.",
-      "img": "/images/ghiacciolo.webp",
+      "img": "/images/ghiacc.webp",
       "prezzo": 1.0
     }
   ]
