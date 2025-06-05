@@ -3,14 +3,14 @@
     "id": 1,
     "nome": "Acqua Naturale",
     "descrizione": "Acqua Naturale",
-    "img": "/images/acquan.webp",
+    "img": "/images/an.webp",
     "prezzo": 0.5
   },
   {
     "id": 2,
     "nome": "Acqua Frizzante",
     "descrizione": "Acqua Frizzante",
-    "img": "/images/acquaf.webp",
+    "img": "/images/af.webp",
     "prezzo": 0.5
   },
   {
@@ -50,10 +50,10 @@
   },
   {
     "id": 9,
-    "nome": "Gatorade",
+    "nome": "Powerade",
     "descrizione": "Rinfrescante, per gli sportivi!",
-    "img": "/images/rosso.webp",
-    "prezzo": 2.0
+    "img": "/images/power.webp",
+    "prezzo": 1.5
   },
   {
     "id": 11,

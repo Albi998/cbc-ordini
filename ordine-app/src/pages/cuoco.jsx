@@ -150,13 +150,13 @@ const Cuoco = () => {
       <h2 className="mb-4">Ordini Cucina</h2>
       <div className="row">
         {/* Colonna sinistra */}
-        <div className="col-md-6">
+        <div className="col-md-6 yellow">
           <h4 className="mb-2">In preparazione</h4>
           {inPreparazione.map((ordine) => (
             <div key={ordine.id} className="card mb-3 shadow-sm">
               <div className="card-body">
                 <div className="d-flex justify-content-between align-items-center">
-                  <h5 className="card-title">Ordine #{ordine.numero_ordine}</h5>
+                  <h5 className="card-title">Ordine #<span id="ordine">{ordine.numero_ordine}</span></h5>
                 </div>
                 <div className="card-text">
                   {raggruppaOrdine(ordine.prodotti)}
@@ -196,7 +196,7 @@ const Cuoco = () => {
             <div key={ordine.id} className="card mb-3 shadow-sm border-success">
               <div className="card-body">
                 <div className="d-flex justify-content-between align-items-center">
-                  <h5 className="card-title">Ordine #{ordine.numero_ordine}</h5>
+                  <h5 className="card-title">Ordine #<span id="ordine">{ordine.numero_ordine}</span></h5>
                 </div>
                 <div className="card-text">
                   {raggruppaOrdine(ordine.prodotti)}

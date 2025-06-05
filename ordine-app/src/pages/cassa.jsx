@@ -125,15 +125,15 @@ const Cassa = () => {
 
     if (panino.nome === "Carbo Beach Burger") {
       const numeroSalse = panino.aggiunte.filter(
-        (a) => a.tipo === "salsa"
+        (a) => a.tipo === "Salse"
       ).length;
       return panino.prezzo + numeroSalse * costoExtra;
     }
 
     // Altri panini: limiti inclusi
-    const limite = { formaggio: 1, verdura: 2, salsa: 2 };
+    const limite = { Formaggio: 1, Verdure: 2, Salse: 2 };
 
-    const tipiContati = { formaggio: 0, verdura: 0, salsa: 0 };
+    const tipiContati = { Formaggio: 0, Verdure: 0, Salse: 0 };
 
     let extra = 0;
     for (const agg of panino.aggiunte || []) {
