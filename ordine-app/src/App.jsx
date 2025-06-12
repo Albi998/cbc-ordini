@@ -16,6 +16,7 @@ import Cuoco from "./pages/cuoco";
 import Assemblaggio from "./pages/assemblaggio";
 import Success from "./pages/success";
 import "./App.css";
+import TuttiOrdini from "./pages/tuttiOrdini"
 
 const AppLayout = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -41,11 +42,7 @@ const AppLayout = ({ children }) => {
 
           <div className="sidebar-content">
             <div className="logo">
-              <img
-                className="logo-img"
-                src="/images/logo.webp"
-                alt="logo"
-              />
+              <img className="logo-img" src="/images/logo.webp" alt="logo" />
             </div>
 
             <div className="sidebar-links">
@@ -72,6 +69,14 @@ const AppLayout = ({ children }) => {
                 }`}
               >
                 Assemblaggio
+              </Link>
+              <Link
+                to="/tutti-gli-ordini"
+                className={`link-nav ${
+                  location.pathname === "/tutti-gli-ordini" ? "active" : ""
+                }`}
+              >
+                Tutti gli Ordini
               </Link>
             </div>
 
@@ -115,6 +120,14 @@ const App = () => {
             element={
               <RequireStaff>
                 <Assemblaggio />
+              </RequireStaff>
+            }
+          />
+          <Route
+            path="/tutti-gli-ordini"
+            element={
+              <RequireStaff>
+                <TuttiOrdini />
               </RequireStaff>
             }
           />
