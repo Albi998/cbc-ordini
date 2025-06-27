@@ -134,7 +134,7 @@ const Assemblaggio = () => {
       <div className="row">
         {/* Colonna sinistra */}
         <div className="col-md-6 yellow">
-          <h4 className="mb-2">Da assemblare</h4>
+          <h4 className="mb-2">🍔 Da assemblare</h4>
           {carnePronta.map((ordine) => (
             <div key={ordine.id} className="card mb-3 shadow-sm">
               <div className="card-body">
@@ -173,7 +173,7 @@ const Assemblaggio = () => {
 
         {/* Colonna destra */}
         <div className="col-md-6">
-          <h4 className="mb-2">Completati ✅</h4>
+          <h4 className="mb-2">✅ Completati</h4>
           {[...completi].reverse().map((ordine) => (
             <div key={ordine.id} className="card mb-3 shadow-sm border-success">
               <div className="card-body">

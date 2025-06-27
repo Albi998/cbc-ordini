@@ -3,6 +3,12 @@ import { supabase } from "../supabaseClient";
 import toast from "react-hot-toast";
 
 const stati = ["da pagare", "in preparazione", "carne pronta", "completo"];
+const titoliColonne = {
+  "da pagare": "🤑 Da Pagare",
+  "in preparazione": "🔥In Preparazione",
+  "carne pronta": "🍔 Assemblaggio",
+  completo: "✅ Completati",
+};
 
 const TuttiOrdini = () => {
   const [ordini, setOrdini] = useState([]);
@@ -62,7 +68,7 @@ const TuttiOrdini = () => {
       <div className="row">
         {stati.map((stato) => (
           <div key={stato} className="col-md-3">
-            <h4 className="mb-2">{stato}</h4>
+            <h4 className="mb-2">{titoliColonne[stato]}</h4>
             <div>
               {ordini
                 .filter((o) => o.stato === stato)

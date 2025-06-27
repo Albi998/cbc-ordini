@@ -14,9 +14,10 @@ import Login from "./pages/login";
 import Cassa from "./pages/cassa";
 import Cuoco from "./pages/cuoco";
 import Assemblaggio from "./pages/assemblaggio";
+import Bar from "./pages/Bar";
 import Success from "./pages/success";
 import "./App.css";
-import TuttiOrdini from "./pages/tuttiOrdini"
+import TuttiOrdini from "./pages/tuttiOrdini";
 
 const AppLayout = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -71,6 +72,14 @@ const AppLayout = ({ children }) => {
                 Assemblaggio
               </Link>
               <Link
+                to="/bar"
+                className={`link-nav ${
+                  location.pathname === "/bar" ? "active" : ""
+                }`}
+              >
+                Bar
+              </Link>
+              <Link
                 to="/tutti-gli-ordini"
                 className={`link-nav ${
                   location.pathname === "/tutti-gli-ordini" ? "active" : ""
@@ -123,6 +132,15 @@ const App = () => {
               </RequireStaff>
             }
           />
+          <Route
+            path="/bar"
+            element={
+              <RequireStaff>
+                <Bar />
+              </RequireStaff>
+            }
+          />
+
           <Route
             path="/tutti-gli-ordini"
             element={

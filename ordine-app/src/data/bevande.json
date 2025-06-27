@@ -53,7 +53,7 @@
     "nome": "Powerade",
     "descrizione": "Rinfrescante, per gli sportivi!",
     "img": "/images/power.webp",
-    "prezzo": 1.5
+    "prezzo": 2
   },
   {
     "id": 11,
@@ -67,6 +67,6 @@
     "nome": "Spritz Aperol",
     "descrizione": "Spritz Aperol",
     "img": "/images/spritz.webp",
-    "prezzo": 4.0
+    "prezzo": 3.5
   }
 ]
