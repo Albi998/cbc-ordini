@@ -41,9 +41,9 @@ const Bar = () => {
       .eq("id", ordineId);
 
     if (error) {
-      toast.error("❌ Errore nell'aggiornamento bibite");
+      // toast.error("❌ Errore nell'aggiornamento bibite");
     } else {
-      toast.success(valore ? "🥤 Bibite consegnate!" : "🔁 Ripristinato");
+      // toast.success(valore ? "🥤 Bibite consegnate!" : "🔁 Ripristinato");
       fetchOrdiniBar();
     }
   };

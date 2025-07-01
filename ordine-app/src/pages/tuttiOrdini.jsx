@@ -44,10 +44,10 @@ const TuttiOrdini = () => {
       .eq("id", ordine.id);
 
     if (error) {
-      toast.error("❌ Errore nel cambiare stato.");
+      // toast.error("❌ Errore nel cambiare stato.");
       console.error(error);
     } else {
-      toast.success(`✅ Stato aggiornato a "${nuovoStato}"`);
+      // toast.success(`✅ Stato aggiornato a "${nuovoStato}"`);
       fetchOrdini();
     }
   };
@@ -55,9 +55,9 @@ const TuttiOrdini = () => {
   const eliminaOrdine = async (id) => {
     const { error } = await supabase.from("ordini").delete().eq("id", id);
     if (error) {
-      toast.error("❌ Errore durante l'eliminazione.");
+      // toast.error("❌ Errore durante l'eliminazione.");
     } else {
-      toast.success("🗑️ Ordine eliminato");
+      // toast.success("🗑️ Ordine eliminato");
       fetchOrdini();
     }
   };

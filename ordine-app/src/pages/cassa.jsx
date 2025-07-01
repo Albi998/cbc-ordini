@@ -171,10 +171,10 @@ const Cassa = () => {
       .eq("id", ordineId);
 
     if (error) {
-      toast.error("❌ Errore nel cambiare stato dell'ordine.");
+      // toast.error("❌ Errore nel cambiare stato dell'ordine.");
       console.error(error);
     } else {
-      toast.success("Ordine in preparazione!");
+      // toast.success("Ordine in preparazione!");
       setOrdiniDaPagare((prev) =>
         prev.filter((ordine) => ordine.id !== ordineId)
       );
@@ -243,9 +243,9 @@ const Cassa = () => {
 
                   if (error) {
                     console.error("Errore invio:", error);
-                    toast.error("❌ Errore durante l'invio dell'ordine.");
+                    // toast.error("❌ Errore durante l'invio dell'ordine.");
                   } else {
-                    toast.success("Ordine inviato con successo!");
+                    // toast.success("Ordine inviato con successo!");
                     setOrdine({ panini: [], bevande: [], snack: [] });
                   }
                 }}
@@ -258,7 +258,7 @@ const Cassa = () => {
         </div>
       ),
       {
-        duration: 30000,
+        duration: 10000,
       }
     );
   };
