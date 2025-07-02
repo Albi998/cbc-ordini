@@ -512,7 +512,7 @@ h2 {
 }
 
 .toast button {
-font-size: 1rem;
+  font-size: 1rem;
 }
 
 .toast > div {
@@ -532,7 +532,7 @@ font-size: 1rem;
 }
 
 .toast-uno p {
-margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .toast-uno > div {
@@ -540,7 +540,6 @@ margin-bottom: 2rem;
   justify-content: flex-end;
   gap: 1rem;
 }
-
 
 .toast p {
   font-size: 1rem !important;
@@ -1098,7 +1097,6 @@ margin-bottom: 2rem;
   }
 }
 
-
 .yellow {
   background-color: var(--color-giallo-cbc);
   padding: 1rem;
@@ -1131,4 +1129,27 @@ margin-bottom: 2rem;
 .accordion-body li {
   margin-bottom: 0.5rem;
   font-weight: 500;
+}
+
+/* ===== 5-col-layout per /tutti-gli-ordini ===== */
+.five-cols > [class^="col-"],
+.five-cols > [class*=" col-"] {
+  flex: 0 0 20%; /* 100 / 5 */
+  max-width: 20%;
+}
+
+/* fallback: sotto i 992 px torna a due-colonne, sotto i 768 px a una  */
+@media (max-width: 991px) {
+  .five-cols > [class^="col-"],
+  .five-cols > [class*=" col-"] {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .five-cols > [class^="col-"],
+  .five-cols > [class*=" col-"] {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }

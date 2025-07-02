@@ -2,12 +2,19 @@ import React, { useEffect, useState } from "react";
 import { supabase } from "../supabaseClient";
 import toast from "react-hot-toast";
 
-const stati = ["da pagare", "in preparazione", "carne pronta", "completo"];
+const stati = [
+  "da pagare",
+  "in preparazione",
+  "carne pronta",
+  "completo",
+  "bibite consegnate",
+];
 const titoliColonne = {
   "da pagare": "🤑 Da Pagare",
   "in preparazione": "🔥In Preparazione",
   "carne pronta": "🍔 Assemblaggio",
   completo: "✅ Completati",
+  "bibite consegnate": "✅ Bibite Consegnate", // <- aggiunta
 };
 
 const TuttiOrdini = () => {
@@ -65,7 +72,7 @@ const TuttiOrdini = () => {
   return (
     <div className="container">
       <h2 className="mb-4">Tutti gli Ordini</h2>
-      <div className="row">
+      <div className="row five-cols">
         {stati.map((stato) => (
           <div key={stato} className="col-md-3">
             <h4 className="mb-2">{titoliColonne[stato]}</h4>
@@ -121,14 +128,18 @@ const AccordionOrdine = ({ ordine, cambiaStatoOrdine, eliminaOrdine }) => {
             €
           </div>
           <div className="d-flex justify-content-between gap-2">
-            <button
-              className="btn-indietro"
-              disabled={ordine.stato === "da pagare"}
-              onClick={() => cambiaStatoOrdine(ordine, "indietro")}
-            >
-              Indietro
-            </button>
-            {ordine.stato === "completo" ? (
+            {ordine.stato !== "bibite consegnate" && (
+              <button
+                className="btn-indietro"
+                disabled={ordine.stato === "da pagare"}
+                onClick={() => cambiaStatoOrdine(ordine, "indietro")}
+              >
+                Indietro
+              </button>
+            )}
+
+            {ordine.stato === "completo" ||
+            ordine.stato === "bibite consegnate" ? (
               <button
                 className="button-canc"
                 onClick={() => eliminaOrdine(ordine.id)}
