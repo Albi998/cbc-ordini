@@ -61,7 +61,10 @@ const Bar = () => {
     }
   };
 
-  const nonConsegnati = ordini.filter((o) => !o.bibite_consegnate);
+  const nonConsegnati = ordini.filter(
+    (o) => !o.bibite_consegnate && o.stato !== "da pagare"
+  );
+
   const consegnati = ordini.filter((o) => o.bibite_consegnate);
 
   return (
