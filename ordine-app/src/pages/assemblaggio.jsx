@@ -62,9 +62,9 @@ const Assemblaggio = () => {
 
                   if (error) {
                     console.error("Errore eliminazione ordine:", error);
-                    toast.error("❌ Errore durante l'eliminazione.");
+                    // toast.error("❌ Errore durante l'eliminazione.");
                   } else {
-                    toast.success("✅ Ordine eliminato.");
+                    // toast.success("✅ Ordine eliminato.");
                     fetchOrdini();
                   }
                 }}

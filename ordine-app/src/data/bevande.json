@@ -64,8 +64,8 @@
   },
   {
     "id": 12,
-    "nome": "Spritz Aperol",
-    "descrizione": "Spritz Aperol",
+    "nome": "Spritz",
+    "descrizione": "Spritz",
     "img": "/images/spritz.webp",
     "prezzo": 3.5
   }

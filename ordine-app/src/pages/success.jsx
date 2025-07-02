@@ -130,6 +130,26 @@ const Success = () => {
     );
   }
 
+  if (statoOrdine === "bibite consegnate") {
+    return (
+      <div className="container success pronto">
+        <h1>Ordine #{ordine.numero_ordine || ordine.id} pronto! 🎉 </h1>
+        <p className="lead">Ritira al chiosco!</p>
+
+        <button
+          className="cancella-success"
+          onClick={() => {
+            localStorage.removeItem("ordine");
+            localStorage.removeItem("ordine_inviato");
+            navigate("/");
+          }}
+        >
+          Torna al Menù
+        </button>
+      </div>
+    );
+  }
+
   return (
     <div className="container success">
       <div className="tick">✅</div>

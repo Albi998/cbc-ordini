@@ -35,15 +35,28 @@ const Bar = () => {
   }, []);
 
   const setBibiteConsegnate = async (ordineId, valore) => {
+    const ordine = ordini.find((o) => o.id === ordineId);
+    if (!ordine) return;
+
+    const prodotti = ordine.prodotti || [];
+    const soloBevande = prodotti.every((p) => p.tipo === "bevanda");
+
+    const updatePayload = {
+      bibite_consegnate: valore,
+    };
+
+    if (valore && soloBevande) {
+      updatePayload.stato = "bibite consegnate";
+    }
+
     const { error } = await supabase
       .from("ordini")
-      .update({ bibite_consegnate: valore })
+      .update(updatePayload)
       .eq("id", ordineId);
 
     if (error) {
-      // toast.error("❌ Errore nell'aggiornamento bibite");
+      toast.error("❌ Errore aggiornamento ordine");
     } else {
-      // toast.success(valore ? "🥤 Bibite consegnate!" : "🔁 Ripristinato");
       fetchOrdiniBar();
     }
   };
